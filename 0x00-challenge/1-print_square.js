@@ -14,10 +14,10 @@ if (process.argv.length <= 2) {
     process.exit(1)
 }
 
-size = parseInt(process.argv[2], 16)
+size = parseInt(process.argv[2], argv[2])
 
 for (let i = 0 ; i < size ; i ++) {
-    for (let j = 0 ; j < size - 1 ; j ++) {
+    for (let j = 0 ; j < size  ; j ++) {
         process.stdout.write("#");
     }
     process.stdout.write("\n");
