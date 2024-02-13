@@ -4,27 +4,32 @@ Square class
 """
 
 
-class Square:
-    def __init__(self, width=0, height=0, *args, **kwargs):
-        self.width = width
-        self.height = height
+class Square():
+    """ Square class """
+    width = 0
+    height = 0
+
+    def __init__(self, *args, **kwargs):
+        """ Instantiation of class """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
     def area_of_my_square(self):
-        """Area of the square"""
+        """ Area of the square """
         return self.width * self.width
 
-    def perimeter_of_my_square(self):
+    def PermiterOfMySquare(self):
         """Perimeter of the square"""
-        return 2 * (self.width + self.height)
+        return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        return f"Width: {self.width}, Height: {self.height}"
+        """ Printable representation """
+        return "{}/{}".format(self.width, self.height)
 
 
 if __name__ == "__main__":
+    """ Create a square object """
     s = Square(width=12, height=9)
     print(s)
-    print(f"Area: {s.area_of_my_square()}")
-    print(f"Perimeter: {s.perimeter_of_my_square()}")
+    print(s.area_of_my_square())
+    print(s.PermiterOfMySquare())
